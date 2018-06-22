@@ -13,19 +13,12 @@ for eachline in line:
 fr.close()
 
 importance=imp
-importance1=np.zeros((len(importance)))
-importance1[0:204]=importance[0:204]
-importance1[204:408]=importance[204:408]
-importance1[408:488]=importance[408:488]
-importance1[488:490]=importance[500:502]
-importance1[490:497]=importance[502:509]
-importance1[497:509]=importance[488:500]
-plt.bar(range(0,204),importance1[0:204],1,color='#FFCE00',label='4-bits Binary')
-plt.bar(range(204,408),importance1[204:408],1,color='#0375B4',label='OPF')
-plt.bar(range(408,488),importance1[408:488],1,color='#007849',label='k-mers')
-plt.bar(range(488,490),importance1[488:490],1,color='#FF0033',label='Site Location')
-plt.bar(range(490,497),importance1[490:497],1,color='#CCCC00',label='Information Theory')
-plt.bar(range(497,509),importance1[497:509],1,color='#262228',label='SNP')
+plt.bar(range(0,204),importance[0:204],1,color='#FFCE00',label='4-bits Binary')
+plt.bar(range(204,408),importance[204:408],1,color='#0375B4',label='OPF')
+plt.bar(range(408,488),importance[408:488],1,color='#007849',label='k-mers')
+plt.bar(range(488,490),importance[488:490],1,color='#FF0033',label='Site Location')
+plt.bar(range(490,497),importance[490:497],1,color='#CCCC00',label='Information Theory')
+plt.bar(range(497,509),importance[497:509],1,color='#262228',label='SNP')
 
 plt.xlabel('feature')
 plt.ylabel('importance-score')
